@@ -16,7 +16,7 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:26.0
-        args: ["start-dev"]
+        args: ["start-dev", "--http-host=0.0.0.0"]
         env:
         - name: KC_DB
           value: postgres
